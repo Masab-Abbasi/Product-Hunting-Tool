@@ -1,0 +1,24 @@
+Product Name | Rating | Monthly Sales
+Non-stick Frying Pan | 4.6 | 1800
+Knife Set with Block | 4.7 | 2200
+Electric Kettle 1.7L | 4.5 | 1500
+Manual Citrus Juicer | 4.3 | 950
+Glass Jug with Lid | 4.4 | 1200
+Microwave Oven | 4.6 | 1300
+Silicone Spatula Set | 4.8 | 1750
+Measuring Cups & Spoons Set | 4.7 | 2000
+Reusable Food Storage Bags | 4.5 | 1450
+Stainless Steel Mixing Bowls | 4.6 | 1600
+Air Fryer 5.8 QT | 4.8 | 2100
+Digital Kitchen Scale | 4.6 | 1700
+Chopping Board Set | 4.5 | 1550
+Dish Drying Rack | 4.4 | 1100
+Blender for Shakes and Smoothies | 4.7 | 1900
+Electric Rice Cooker 6 Cup | 4.5 | 1400
+Stainless Steel Knife Set | 4.7 | 2250
+Glass Food Storage Containers | 4.6 | 1650
+Kitchen Tongs Set | 4.5 | 1150
+Coffee Maker 12 Cup | 4.6 | 1850
+Stainless Steel Fork | 4.9 | 2900
+Pressure Cooker | 5.0 | 5000
+Super Nova Glass | 4.6 | 4590
