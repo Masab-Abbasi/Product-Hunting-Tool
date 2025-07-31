@@ -1,6 +1,14 @@
 # 🛒 Product Hunting Tool
 
-**Product Hunting Tool** is a powerful console-based application designed for **business owners, entrepreneurs, and sellers** who want to analyze the performance of products before launching them into the market. This tool helps you make data-driven decisions by allowing you to search products and view key performance indicators like ratings, monthly sales, and smart recommendations.
+**Product Hunting Tool** is a powerful **console-based Python application** designed for **business owners, entrepreneurs, and sellers** who want to analyze the performance of products before launching them into the market.
+
+This tool helps you make **data-driven decisions** by providing insights like ratings, sales, and AI-style recommendations based on performance.
+
+---
+
+## 🎯 Purpose
+
+> Designed during the ICT course project, this tool helps businesses identify winning products in specific categories based on existing market performance indicators like **ratings** and **monthly sales**.
 
 ---
 
@@ -10,88 +18,112 @@
 - ✅ **Strong Password Validation**
 - 📁 **Category-Wise Product Management (8 Categories)**
 - 🔍 **Smart Product Search (Partial Match)**
-- ⭐ **View Product Ratings, Sales, and AI-Based Recommendations**
+- ⭐ **View Product Ratings, Sales, and Smart Recommendations**
 - 🛠️ **Admin Panel to Edit/Add Products**
-- 📄 **File-Based Data Storage (No Database Required)**
+- 🗂️ **File-Based Data Storage (No Database Required)**
 
 ---
 
 ## 🧩 Key Concepts Used
 
 - **File Handling** (`open`, `read`, `write`, `append`)
-- **Modular Programming** (organized with functions per feature)
-- **Exception Handling** (`try-except` for robust input & file error checks)
+- **Modular Programming** (organized into reusable functions)
+- **Exception Handling** (`try-except` for robust error control)
 - **Input Validation** (`isalpha()`, `isdigit()`, `isalnum()`)
 - **String Manipulation** (`split`, `strip`, `lower`)
-- **Global Variables** (for session tracking)
+- **Global Variables** (for login/session management)
 - **Loops & Conditional Logic** (`while`, `if-elif-else`)
 
 ---
 
-## 🗂️ Category List
+## 🗂️ Categories Covered
 
-- Home and Kitchen  
-- Health and Personal Care  
-- Electronics  
-- Toys and Games  
-- Beauty and Personal Care  
-- Clothing, Shoes and Jewelry  
-- Sports and Outdoors  
-- Pet Supplies  
+Each product falls under one of the following real-world domains, with each category having its own `.txt` file:
 
-Each category has its own `.txt` file (e.g., `Home and Kitchen.txt`) storing product data in this format:
+- 🏠 Home and Kitchen  
+- 🧼 Health and Personal Care  
+- 💻 Electronics  
+- 🧸 Toys and Games  
+- 💄 Beauty and Personal Care  
+- 👗 Clothing, Shoes and Jewelry  
+- 🏀 Sports and Outdoors  
+- 🐾 Pet Supplies  
+
+Example product data stored in:
+Home and Kitchen.txt:
+Electric Kettle 1.5L | 4.6 | 1800
+Dish Rack Stainless Steel | 4.5 | 1500
 
 
 ---
 
-## 🔑 Security Features
+## 🔐 Security Features
 
-- ✅ **Strong Password Check:** Minimum 8 characters, at least 1 digit, 1 uppercase, and 1 special character.
-- 🚫 **Duplicate Username Prevention**
-- 🔐 **Admin Access Protection** using a fixed secret password.
-- 💥 **Login Attempt Limits** (3 attempts)
+- ✅ **Strong Password Check:** Min 8 chars, includes uppercase, digit, and special char.
+- 🚫 **Duplicate Username Detection**
+- 🔐 **Admin Access Restriction** using a secure, fixed password.
+- 💥 **Login Attempt Limits** (3 max retries)
 
 ---
 
 ## 🧠 Smart Recommendation Engine
 
-The tool provides recommendations based on:
+Based on:
+- ⭐ Product Ratings
+- 📈 Monthly Sales
 
-- ⭐ **Ratings**
-- 📈 **Monthly Sales**
-
-Sample logic:
-- Rating ≥ 4.5 and Sales ≥ 1500 → **"Highly Recommended Product"**
-- Rating ≥ 4.0 and Sales ≥ 1000 → **"Good Product"**
-- Else → **"Not Recommended"**
+**Recommendation Logic**:
+| Rating      | Sales      | Recommendation               |
+|-------------|------------|------------------------------|
+| ≥ 4.5       | ≥ 1500     | **Highly Recommended**       |
+| ≥ 4.0       | ≥ 1000     | Good Product (Consider More) |
+| Else        | Any        | Not Recommended              |
 
 ---
 
 ## 👤 User Flow
 
-1. **Login/Register**
+1. **Register/Login**
 2. **Select a Category**
-3. **Search Product by Name (Partial Search Allowed)**
-4. **View Ratings, Sales, or Get Recommendation**
-5. **Continue Search / Go to Main Menu / Exit**
+3. **Search for a Product**
+4. **View Details / Recommendation**
+5. **Repeat Search / Return to Main / Exit**
 
 ---
 
-## 🔧 Admin Panel
+## 🔧 Admin Panel Features
 
-Admins can:
-- 🔄 **Edit Existing Categories**
-- 🆕 **Add More Products**
-- 📝 **Write Data to Category Files**
+- 🆕 Add new products to any category
+- 🔄 Edit categories using simple input
+- ✅ All changes reflect in corresponding `.txt` files
+
+---
+
+## 📘 Methods Overview
+
+| **Method Name**            | **Purpose / Description**                                                                  |
+|----------------------------|--------------------------------------------------------------------------------------------|
+| `register_user()`          | Handles user registration with strong password checks and duplicate detection.             |
+| `login_user()`             | Verifies registered users with limited login attempts.                                     |
+| `login_admin()`            | Validates admin credentials to access admin-only functionality.                            |
+| `show_user_login_menu()`   | Menu to choose between register/login for regular users.                                   |
+| `show_admin_menu()`        | Displays admin dashboard with editing options.                                             |
+| `categoires()`             | Shows a list of product categories and stores the selected one.                            |
+| `view_category(category)`  | Displays selected category and initiates product search.                                   |
+| `search_products(filename)`| Lets user search by keyword and view rating, sales, and recommendation.                    |
+| `choice_menu()`            | Post-search menu to search again, go home, or exit.                                        |
+| `is_strong(password)`      | Validates password strength criteria.                                                      |
+| `duplicate_user(username)` | Checks for existing usernames in the registration file.                                    |
+| `edit_category()`          | Allows admin to append new product entries into category files.                            |
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### 🔧 Prerequisites
 - Python 3.x
-- A code editor (VS Code / PyCharm recommended)
+- VS Code / PyCharm
 
-### To Run:
+### ▶️ Run the Program
 ```bash
 python product_hunting_tool.py
